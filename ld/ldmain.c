@@ -1516,7 +1516,7 @@ undefined_symbol (struct bfd_link_info *info,
       if (error_count < MAX_ERRORS_IN_A_ROW)
 	{
 	  if (error)
-	    einfo (_("%X%P: %H: undefined reference to `%pT'\n"),
+	    einfo (_("%X%P: %H: \x1b[31;1mundefined reference\x1b[0m to \x1b[1m`%pT'\x1b[0m\n"),
 		   abfd, section, address, name);
 	  else
 	    einfo (_("%P: %H: warning: undefined reference to `%pT'\n"),
@@ -1539,7 +1539,7 @@ undefined_symbol (struct bfd_link_info *info,
       if (error_count < MAX_ERRORS_IN_A_ROW)
 	{
 	  if (error)
-	    einfo (_("%X%P: %pB: undefined reference to `%pT'\n"),
+	    einfo (_("%X%P: %pB: \x1b[31;1mundefined reference\x1b[0m to \x1b[1m`%pT'\x1b[0m\n"),
 		   abfd, name);
 	  else
 	    einfo (_("%P: %pB: warning: undefined reference to `%pT'\n"),
